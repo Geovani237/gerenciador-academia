@@ -7,10 +7,10 @@ public class Aluno {
     private String nome;
     private String telefone;
     private String objetivo;
-//    private Boolean plano;
+    private Boolean ativo;
     private String matricula;
     private Treino treino;
-    private Plano Plano;
+    private Plano plano;
 
     public Aluno() {
 
@@ -23,7 +23,7 @@ public class Aluno {
         this.objetivo = objetivo;
         this.matricula = matricula;
         this.treino = treino;
-        Plano = plano;
+        this.plano = plano;
     }
 
     public Long getId() {
@@ -75,10 +75,32 @@ public class Aluno {
     }
 
     public Plano getPlano() {
-        return Plano;
+        return plano;
     }
 
     public void setPlano(Plano plano) {
-        Plano = plano;
+        this.plano = plano;
+    }
+
+    public Boolean getAtivo() {
+        return ativo;
+    }
+
+    public void setAtivo(Boolean ativo) {
+        this.ativo = ativo;
+    }
+
+    @Override
+    public String toString() {
+        return "Aluno {\n" +
+                " id=" + id +
+                ",\n nome='" + nome + '\'' +
+                ",\n telefone='" + telefone + '\'' +
+                ",\n objetivo='" + objetivo + '\'' +
+                ",\n ativo=" + ativo +
+                ",\n matricula='" + matricula + '\'' +
+                ",\n treino=" + treino +
+                ",\n Plano=" + plano + "\n"+
+                '}';
     }
 }

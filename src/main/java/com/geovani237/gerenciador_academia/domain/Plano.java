@@ -47,4 +47,14 @@ public class Plano {
     public void setStatus(Boolean status) {
         this.status = status;
     }
+
+    @Override
+    public String toString() {
+        return " Plano {\n" +
+                "    id=" + id +
+                ",\n    valor=" + valor +
+                ",\n    vencimento='" + vencimento + '\'' +
+                ",\n    status=" + status +
+                '}';
+    }
 }

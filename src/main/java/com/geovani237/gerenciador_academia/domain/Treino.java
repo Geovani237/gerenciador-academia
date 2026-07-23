@@ -55,4 +55,15 @@ public class Treino {
     public void setRepeticoes(Integer repeticoes) {
         this.repeticoes = repeticoes;
     }
+
+    @Override
+    public String toString() {
+        return " Treino {\n" +
+                "    id=" + id +
+                ",\n    objetivo='" + objetivo + '\'' +
+                ",\n    exercicio='" + exercicio + '\'' +
+                ",\n    series=" + series +
+                ",\n    repeticoes=" + repeticoes +
+                '}';
+    }
 }
