@@ -63,7 +63,7 @@ public class Treino {
                 ",\n    objetivo='" + objetivo + '\'' +
                 ",\n    exercicio='" + exercicio + '\'' +
                 ",\n    series=" + series +
-                ",\n    repeticoes=" + repeticoes +
+                ",\n    repeticoes=" + repeticoes + "\n"+
                 '}';
     }
 }

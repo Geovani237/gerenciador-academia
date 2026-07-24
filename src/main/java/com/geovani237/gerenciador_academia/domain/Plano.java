@@ -54,7 +54,7 @@ public class Plano {
                 "    id=" + id +
                 ",\n    valor=" + valor +
                 ",\n    vencimento='" + vencimento + '\'' +
-                ",\n    status=" + status +
+                ",\n    status=" + status + "\n"+
                 '}';
     }
 }

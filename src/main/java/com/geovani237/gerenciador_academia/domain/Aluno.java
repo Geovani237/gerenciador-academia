@@ -1,5 +1,8 @@
 package com.geovani237.gerenciador_academia.domain;
 
+import java.util.ArrayList;
+import java.util.List;
+
 //@Entity
 public class Aluno {
 
@@ -9,18 +12,19 @@ public class Aluno {
     private String objetivo;
     private Boolean ativo;
     private String matricula;
-    private Treino treino;
+    private List<Treino> treino = new ArrayList<>();
     private Plano plano;
 
     public Aluno() {
 
     }
 
-    public Aluno(Long id, String nome, String telefone, String objetivo, String matricula, Treino treino, Plano plano) {
+    public Aluno(Long id, String nome, String telefone, String objetivo, Boolean ativo, String matricula, List<Treino> treino, Plano plano) {
         this.id = id;
         this.nome = nome;
         this.telefone = telefone;
         this.objetivo = objetivo;
+        this.ativo = ativo;
         this.matricula = matricula;
         this.treino = treino;
         this.plano = plano;
@@ -58,6 +62,14 @@ public class Aluno {
         this.objetivo = objetivo;
     }
 
+    public Boolean getAtivo() {
+        return ativo;
+    }
+
+    public void setAtivo(Boolean ativo) {
+        this.ativo = ativo;
+    }
+
     public String getMatricula() {
         return matricula;
     }
@@ -66,11 +78,11 @@ public class Aluno {
         this.matricula = matricula;
     }
 
-    public Treino getTreino() {
+    public List<Treino> getTreino() {
         return treino;
     }
 
-    public void setTreino(Treino treino) {
+    public void setTreino(List<Treino> treino) {
         this.treino = treino;
     }
 
@@ -80,14 +92,6 @@ public class Aluno {
 
     public void setPlano(Plano plano) {
         this.plano = plano;
-    }
-
-    public Boolean getAtivo() {
-        return ativo;
-    }
-
-    public void setAtivo(Boolean ativo) {
-        this.ativo = ativo;
     }
 
     @Override
