@@ -2,34 +2,47 @@ package com.geovani237.gerenciador_academia.service;
 
 import com.geovani237.gerenciador_academia.domain.Aluno;
 import com.geovani237.gerenciador_academia.domain.Treino;
+import com.geovani237.gerenciador_academia.exceptions.BusinessException;
 import com.geovani237.gerenciador_academia.repository.AlunoRepository;
+import lombok.AllArgsConstructor;
 
 import java.util.List;
 
 //@Service
-public class AlunoService implements AlunoRepository {
 
-    @Override
+public class AlunoService {
+
+    private final AlunoRepository alunoRepository;
+
+
+    public AlunoService() {
+        this.alunoRepository = new AlunoRepository();
+    }
+
     public Aluno cadastro(Aluno aluno) {
 
         if (aluno.getNome() == null || aluno.getTelefone() == null) {
-            throw new IllegalArgumentException();
+            throw new BusinessException("Dados obrigatórios não preenchidos");
         }
 
-        return aluno;
+        return alunoRepository.cadastrar(aluno);
 
     }
 
-    @Override
-    public List<?> visualizar(Aluno aluno) {
-
-        for (int i = 0; i < aluno.getTreino().size(); i++) {
-            Treino treino = aluno.getTreino().get(i);
-            System.out.println("--------------------------------");
-            System.out.println(treino.getExercicio());
-            System.out.println("--------------------------------");
-        }
-        return List.of(aluno.getTreino());
+    public List<Aluno> listarTodos() {
+        return alunoRepository.listarTodos();
     }
+
+
+//    public List<?> visualizar(Aluno aluno) {
+//
+//        for (int i = 0; i < aluno.getTreino().size(); i++) {
+//            Treino treino = aluno.getTreino().get(i);
+//            System.out.println("--------------------------------");
+//            System.out.println(treino.getExercicio());
+//            System.out.println("--------------------------------");
+//        }
+//        return List.of(aluno.getTreino());
+//    }
 
 }

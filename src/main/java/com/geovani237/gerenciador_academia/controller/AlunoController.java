@@ -11,22 +11,25 @@ import java.util.List;
 //RequestMapping("/alunos")
 public class AlunoController {
 
-    private AlunoService alunoService;
+    private final AlunoService alunoService;
 
-    @Autowired
-    public AlunoController(AlunoService alunoService) {
-        this.alunoService = alunoService;
+    public AlunoController() {
+        this.alunoService = new AlunoService();
     }
 
 //    @PostMapping()
 //    @ResponseStatus(HttpStatus.CREATED)
     public Aluno cadastrar(Aluno aluno) {
-        System.out.println(aluno);
+//        System.out.println(aluno);
         return alunoService.cadastro(aluno);
     }
 
-    public List<?> visualizar(Aluno aluno) {
-        System.out.println(aluno.getTreino());
-        return alunoService.visualizar(aluno);
+    public List<Aluno> listarTodos() {
+        return alunoService.listarTodos();
     }
+
+//    public List<?> visualizar(Aluno aluno) {
+//        System.out.println(aluno.getTreino());
+//        return alunoService.visualizar(aluno);
+//    }
 }
