@@ -32,7 +32,7 @@ public class Main {
         plano.setId(1L);
         plano.setStatus(true);
         plano.setValor(new BigDecimal("39.99"));
-        plano.setVencimento(1);
+        plano.setVencimento(0);
 
         Aluno aluno = new Aluno();
         aluno.setNome("Geovani1");
@@ -48,19 +48,36 @@ public class Main {
 
 
 
-
-
-//        aluno2.setTreino(List.of(treino1, treino2));
-//        aluno2.setPlano(plano);
-
-
-        controller.cadastrar(aluno);
         controller.cadastrar(aluno2);
-        controller.cadastrar(treino);
+
+        controller.checkIn(aluno2);
+//        controller.checkIn(aluno2);
+//        controller.checkIn(aluno2);
+//        controller.listarTodos().forEach(System.out::println);
+//
+        controller.listarTodos().forEach(System.out::println);
+        controller.consultarPlano(aluno2);
+        aluno2.getPlano().setVencimento(1);
+        controller.checkIn(aluno2);
+        controller.consultarPlano(aluno2);
+        aluno2.getPlano().setVencimento(2);
         controller.checkIn(aluno2);
         controller.checkIn(aluno2);
+        controller.checkIn(aluno2);
+        controller.consultarPlano(aluno2);
         controller.checkIn(aluno2);
         controller.listarTodos().forEach(System.out::println);
-//        controller.visualizar(aluno2);
+//        controller.pagarMensalidade(aluno2, plano);
+//        System.out.println("-------------------");
+//        controller.consultarPlano(aluno2);
+//        controller.pagarMensalidade(aluno2, plano);
+//        System.out.println("-------------------");
+//        controller.listarTodos().forEach(System.out::println);
+//        controller.checkIn(aluno2);
+//        controller.checkIn(aluno2);
+//
+//        controller.listarTodos().forEach(System.out::println);
+
+        //TODO implementar bando de dados em memoria para Treino e Plano
     }
 }

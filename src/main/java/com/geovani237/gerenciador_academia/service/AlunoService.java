@@ -37,12 +37,17 @@ public class AlunoService {
     }
 
     public void checkIn(Aluno aluno) {
+        //TODO tratar NPE para plano quando se faz check-in
+
         if (aluno.getPlano().getStatus()) {
             List<LocalDateTime> datas = aluno.getHistorico();
             datas.add(LocalDateTime.now());
             aluno.setHistorico(datas);
+            System.out.println("Acesso a academia LIBERADO!");
+            System.out.println(aluno.getPlano().getStatus());
         } else {
             System.out.println("Acesso a academina NEGADO!");
+            System.out.println(aluno.getPlano().getStatus());
         }
     }
 

@@ -11,13 +11,26 @@ import java.math.BigDecimal;
 @Data
 public class Plano {
 
+    //TODO Alterar vencimento para utilizar datas
+
     private Long id;
     private BigDecimal valor;
     private Integer vencimento;
     private Boolean status;
 
+//    public void setStatus(Boolean status) {
+//        if (getVencimento() == 0){
+//            this.status = status;
+//        } else {
+//            this.status = false;
+//        }
+//    }
 
-//    @Override
+//    public Integer getVencimento() {
+//        return vencimento;
+//    }
+
+    //    @Override
 //    public String toString() {
 //        return " Plano {\n" +
 //                "    id=" + id +
