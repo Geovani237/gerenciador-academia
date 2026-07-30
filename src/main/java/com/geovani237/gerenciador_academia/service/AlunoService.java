@@ -6,6 +6,9 @@ import com.geovani237.gerenciador_academia.exceptions.BusinessException;
 import com.geovani237.gerenciador_academia.repository.AlunoRepository;
 import lombok.AllArgsConstructor;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 //@Service
@@ -31,6 +34,16 @@ public class AlunoService {
 
     public List<Aluno> listarTodos() {
         return alunoRepository.listarTodos();
+    }
+
+    public void checkIn(Aluno aluno) {
+        if (aluno.getPlano().getStatus()) {
+            List<LocalDateTime> datas = aluno.getHistorico();
+            datas.add(LocalDateTime.now());
+            aluno.setHistorico(datas);
+        } else {
+            System.out.println("Acesso a academina NEGADO!");
+        }
     }
 
 

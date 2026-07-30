@@ -36,6 +36,12 @@ public class AlunoController {
         return alunoService.listarTodos();
     }
 
+    public void checkIn(Aluno aluno) {
+        alunoService.checkIn(aluno);
+    }
+
+
+
 //    public List<?> visualizar(Aluno aluno) {
 //        System.out.println(aluno.getTreino());
 //        return alunoService.visualizar(aluno);

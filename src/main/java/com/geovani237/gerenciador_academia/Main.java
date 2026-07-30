@@ -28,6 +28,12 @@ public class Main {
         treino.setRepeticoes(12);
         treino.setSeries(4);
 
+        Plano plano = new Plano();
+        plano.setId(1L);
+        plano.setStatus(true);
+        plano.setValor(new BigDecimal("39.99"));
+        plano.setVencimento(1);
+
         Aluno aluno = new Aluno();
         aluno.setNome("Geovani1");
         aluno.setTelefone("19999999999");
@@ -38,6 +44,8 @@ public class Main {
         aluno2.setNome("Geovani2");
         aluno2.setTelefone("19999999999");
         aluno2.setObjetivo("Ganhar Músculo");
+        aluno2.setPlano(plano);
+
 
 
 
@@ -49,6 +57,9 @@ public class Main {
         controller.cadastrar(aluno);
         controller.cadastrar(aluno2);
         controller.cadastrar(treino);
+        controller.checkIn(aluno2);
+        controller.checkIn(aluno2);
+        controller.checkIn(aluno2);
         controller.listarTodos().forEach(System.out::println);
 //        controller.visualizar(aluno2);
     }
