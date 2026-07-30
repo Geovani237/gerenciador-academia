@@ -34,6 +34,7 @@ public class AlunoService {
     }
 
 
+
 //    public List<?> visualizar(Aluno aluno) {
 //
 //        for (int i = 0; i < aluno.getTreino().size(); i++) {

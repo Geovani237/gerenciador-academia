@@ -14,7 +14,7 @@ public class Aluno {
     private String telefone;
     private String objetivo;
 //    private String matricula;
-//    private List<Treino> treino = new ArrayList<>();
+    private Treino treino;
     private Plano plano;
 
 }
