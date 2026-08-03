@@ -1,13 +1,12 @@
 package com.geovani237.gerenciador_academia;
 
-import ch.qos.logback.core.net.SyslogOutputStream;
 import com.geovani237.gerenciador_academia.controller.AlunoController;
 import com.geovani237.gerenciador_academia.controller.TreinoController;
 import com.geovani237.gerenciador_academia.domain.Aluno;
 import com.geovani237.gerenciador_academia.domain.Exercicio;
+import com.geovani237.gerenciador_academia.domain.Treino;
 import com.geovani237.gerenciador_academia.domain.enums.ObjetivoTreinoEnum;
 import com.geovani237.gerenciador_academia.domain.enums.PlanoEnum;
-import com.geovani237.gerenciador_academia.domain.Treino;
 
 import java.util.HashMap;
 import java.util.Map;
