@@ -24,9 +24,9 @@ public class Main {
 
         Treino treino = new Treino();
         treino.setObjetivo("Hipertrofia");
-        treino.setExercicio(Set.of("Supino Reto", "Supino Declinado"));
-        treino.setRepeticoes(12);
-        treino.setSeries(4);
+//        treino.setExercicio(Set.of("Supino Reto", "Supino Declinado"));
+//        treino.setRepeticoes(12);
+//        treino.setSeries(4);
 
         Plano plano = new Plano();
         plano.setId(1L);
@@ -44,7 +44,7 @@ public class Main {
         aluno2.setNome("Geovani2");
         aluno2.setTelefone("19999999999");
         aluno2.setObjetivo("Ganhar Músculo");
-        aluno2.setPlano(plano);
+//        aluno2.setPlano(plano);
 
 
 
@@ -57,10 +57,10 @@ public class Main {
 //
         controller.listarTodos().forEach(System.out::println);
         controller.consultarPlano(aluno2);
-        aluno2.getPlano().setVencimento(1);
+//        aluno2.getPlano().setVencimento(1);
         controller.checkIn(aluno2);
         controller.consultarPlano(aluno2);
-        aluno2.getPlano().setVencimento(2);
+//        aluno2.getPlano().setVencimento(2);
         controller.checkIn(aluno2);
         controller.checkIn(aluno2);
         controller.checkIn(aluno2);

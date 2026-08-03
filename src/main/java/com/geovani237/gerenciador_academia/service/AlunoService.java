@@ -22,14 +22,18 @@ public class AlunoService {
         this.alunoRepository = new AlunoRepository();
     }
 
-    public Aluno cadastro(Aluno aluno) {
+    public Integer cadastro(Aluno aluno) {
 
         if (aluno.getNome() == null || aluno.getTelefone() == null) {
             throw new BusinessException("Dados obrigatórios não preenchidos");
         }
 
-        return alunoRepository.cadastrar(aluno);
-
+        try {
+            Aluno alunoCadastrado = alunoRepository.cadastrar(aluno);
+            return alunoCadastrado.getMatricula();
+        } catch (Exception e) {
+            throw new RuntimeException("Erro ao cadastrar aluno", e);
+        }
     }
 
     public List<Aluno> listarTodos() {
@@ -39,16 +43,16 @@ public class AlunoService {
     public void checkIn(Aluno aluno) {
         //TODO tratar NPE para plano quando se faz check-in
 
-        if (aluno.getPlano().getStatus()) {
-            List<LocalDateTime> datas = aluno.getHistorico();
-            datas.add(LocalDateTime.now());
-            aluno.setHistorico(datas);
-            System.out.println("Acesso a academia LIBERADO!");
-            System.out.println(aluno.getPlano().getStatus());
-        } else {
-            System.out.println("Acesso a academina NEGADO!");
-            System.out.println(aluno.getPlano().getStatus());
-        }
+//        if (aluno.getPlano().getStatus()) {
+//            List<LocalDateTime> datas = aluno.getHistorico();
+//            datas.add(LocalDateTime.now());
+//            aluno.setHistorico(datas);
+//            System.out.println("Acesso a academia LIBERADO!");
+//            System.out.println(aluno.getPlano().getStatus());
+//        } else {
+//            System.out.println("Acesso a academina NEGADO!");
+//            System.out.println(aluno.getPlano().getStatus());
+//        }
     }
 
 

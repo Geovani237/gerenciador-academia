@@ -28,7 +28,7 @@ public class AlunoController {
 
 //    @PostMapping()
 //    @ResponseStatus(HttpStatus.CREATED)
-    public Aluno cadastrar(Aluno aluno) {
+    public Integer cadastrar(Aluno aluno) {
 //        System.out.println(aluno);
         return alunoService.cadastro(aluno);
     }
