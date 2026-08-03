@@ -1,12 +1,8 @@
 package com.geovani237.gerenciador_academia.controller;
 
 import com.geovani237.gerenciador_academia.domain.Aluno;
-import com.geovani237.gerenciador_academia.domain.Plano;
 import com.geovani237.gerenciador_academia.domain.Treino;
 import com.geovani237.gerenciador_academia.service.AlunoService;
-import com.geovani237.gerenciador_academia.service.PlanoService;
-import com.geovani237.gerenciador_academia.service.TreinoService;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 import java.util.Map;
@@ -36,8 +32,8 @@ public class AlunoController {
         return alunoService.listarTodos();
     }
 
-    public void checkIn(Aluno aluno) {
-        alunoService.checkIn(aluno);
+    public void checkIn(Integer matricula) {
+        alunoService.checkIn(matricula);
     }
 
     public void atualizarTreino(Integer matricula, Treino treino) {
@@ -46,6 +42,10 @@ public class AlunoController {
 
     public List<String> listarTreino(Integer matricula) {
         return alunoService.listarTreino(matricula);
+    }
+
+    public List<String> listarHistorico(Integer matricula) {
+        return alunoService.listarHistorico(matricula);
     }
 
 //    public void consultarPlano(Aluno aluno) {

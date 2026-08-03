@@ -2,14 +2,7 @@ package com.geovani237.gerenciador_academia;
 
 import com.geovani237.gerenciador_academia.controller.AlunoController;
 import com.geovani237.gerenciador_academia.domain.Aluno;
-import com.geovani237.gerenciador_academia.domain.Plano;
 import com.geovani237.gerenciador_academia.domain.Treino;
-import com.geovani237.gerenciador_academia.service.AlunoService;
-
-import java.math.BigDecimal;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
@@ -28,11 +21,11 @@ public class Main {
 //        treino.setRepeticoes(12);
 //        treino.setSeries(4);
 
-        Plano plano = new Plano();
-        plano.setId(1L);
-        plano.setStatus(true);
-        plano.setValor(new BigDecimal("39.99"));
-        plano.setVencimento(0);
+//        Plano plano = new Plano();
+//        plano.setId(1L);
+//        plano.setStatus(true);
+//        plano.setValor(new BigDecimal("39.99"));
+//        plano.setVencimento(0);
 
         Aluno aluno = new Aluno();
         aluno.setNome("Geovani1");
@@ -50,7 +43,7 @@ public class Main {
 
         controller.cadastrar(aluno2);
 
-        controller.checkIn(aluno2);
+//        controller.checkIn(aluno2);
 //        controller.checkIn(aluno2);
 //        controller.checkIn(aluno2);
 //        controller.listarTodos().forEach(System.out::println);
@@ -58,7 +51,7 @@ public class Main {
         controller.listarTodos().forEach(System.out::println);
 //        controller.consultarPlano(aluno2);
 //        aluno2.getPlano().setVencimento(1);
-        controller.checkIn(aluno2);
+       /* controller.checkIn(aluno2);
 //        controller.consultarPlano(aluno2);
 //        aluno2.getPlano().setVencimento(2);
         controller.checkIn(aluno2);
@@ -66,7 +59,7 @@ public class Main {
         controller.checkIn(aluno2);
 //        controller.consultarPlano(aluno2);
         controller.checkIn(aluno2);
-        controller.listarTodos().forEach(System.out::println);
+        controller.listarTodos().forEach(System.out::println);*/
 //        controller.pagarMensalidade(aluno2, plano);
 //        System.out.println("-------------------");
 //        controller.consultarPlano(aluno2);
