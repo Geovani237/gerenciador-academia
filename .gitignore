@@ -1,15 +1,48 @@
 # macOS
 .DS_Store
 
+# Linux / Ubuntu
+*~
+.Trash-*
+.directory
+
+# Vim / editors
+*.swp
+*.swo
+
 # IntelliJ IDEA
 .idea/
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries/
 *.iml
-out/
 
-# Java / Maven
+# VS Code
+.vscode/
+
+# Java / Maven / Gradle
 target/
+build/
+out/
+.gradle/
 *.class
+*.jar
+*.war
+*.ear
+hs_err_pid*
+replay_pid*
+
+# Logs
 *.log
 
 # Environment files
 .env
+.env.*
+
+# Temporary files
+tmp/
+temp/
+
+# Generated reports / misc
+dependency-reduced-pom.xml
