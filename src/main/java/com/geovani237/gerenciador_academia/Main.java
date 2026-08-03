@@ -23,7 +23,7 @@ public class Main {
 //        Plano plano = new Plano(1L, new BigDecimal("39.99"), "25/07/2026", true);
 
         Treino treino = new Treino();
-        treino.setObjetivo("Hipertrofia");
+//        treino.setObjetivo("Hipertrofia");
 //        treino.setExercicio(Set.of("Supino Reto", "Supino Declinado"));
 //        treino.setRepeticoes(12);
 //        treino.setSeries(4);
@@ -56,15 +56,15 @@ public class Main {
 //        controller.listarTodos().forEach(System.out::println);
 //
         controller.listarTodos().forEach(System.out::println);
-        controller.consultarPlano(aluno2);
+//        controller.consultarPlano(aluno2);
 //        aluno2.getPlano().setVencimento(1);
         controller.checkIn(aluno2);
-        controller.consultarPlano(aluno2);
+//        controller.consultarPlano(aluno2);
 //        aluno2.getPlano().setVencimento(2);
         controller.checkIn(aluno2);
         controller.checkIn(aluno2);
         controller.checkIn(aluno2);
-        controller.consultarPlano(aluno2);
+//        controller.consultarPlano(aluno2);
         controller.checkIn(aluno2);
         controller.listarTodos().forEach(System.out::println);
 //        controller.pagarMensalidade(aluno2, plano);

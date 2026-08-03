@@ -55,6 +55,36 @@ public class AlunoService {
 //        }
     }
 
+    public void atualizarTreino(Integer matricula, Treino treino) {
+        Aluno aluno = alunoRepository.buscarPorMatricula(matricula);
+        if (aluno != null) {
+            aluno.setTreino(treino);
+            alunoRepository.atualizar(aluno);
+        } else {
+            throw new BusinessException("Aluno não encontrado para matrícula: " + matricula);
+        }
+    }
+
+    public List<String> listarTreino(Integer matricula) {
+        Aluno aluno = alunoRepository.buscarPorMatricula(matricula);
+        if (aluno != null) {
+            Treino treino = aluno.getTreino();
+            if (treino != null) {
+                List<String> exercicios = new ArrayList<>();
+                exercicios.add("Aluno: " +  aluno.getNome());
+                exercicios.add("Objetivo do treino: " + treino.getObjetivo());
+                exercicios.add("=============================");
+                treino.getExercicios().forEach((nome, exercicio) -> {
+                    exercicios.add("Exercício: " + nome + ", Séries: " + exercicio.getSeries() + ", Repetições: " + exercicio.getRepeticoes());
+                });
+                return exercicios;
+            } else {
+                throw new BusinessException("Treino não encontrado para matrícula: " + matricula);
+            }
+        } else {
+            throw new BusinessException("Aluno não encontrado para matrícula: " + matricula);
+        }
+    }
 
 
 //    public List<?> visualizar(Aluno aluno) {

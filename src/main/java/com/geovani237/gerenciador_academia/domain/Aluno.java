@@ -1,8 +1,8 @@
 package com.geovani237.gerenciador_academia.domain;
 
+import com.geovani237.gerenciador_academia.domain.enums.PlanoEnum;
 import lombok.Data;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;

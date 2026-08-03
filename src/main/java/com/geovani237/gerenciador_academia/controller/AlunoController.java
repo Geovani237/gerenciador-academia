@@ -9,6 +9,7 @@ import com.geovani237.gerenciador_academia.service.TreinoService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
+import java.util.Map;
 
 //RestController
 //RequestMapping("/alunos")
@@ -16,14 +17,8 @@ public class AlunoController {
 
     private final AlunoService alunoService;
 
-    private final TreinoService treinoService;
-
-    private final PlanoService planoService;
-
     public AlunoController() {
-        this.treinoService = new TreinoService();
         this.alunoService = new AlunoService();
-        this.planoService = new PlanoService();
     }
 
 //    @PostMapping()
@@ -33,9 +28,9 @@ public class AlunoController {
         return alunoService.cadastro(aluno);
     }
 
-    public Treino cadastrar(Treino treino) {
-        return treinoService.cadastro(treino);
-    }
+//    public Treino cadastrar(Treino treino) {
+//        return treinoService.cadastro(treino);
+//    }
 
     public List<Aluno> listarTodos() {
         return alunoService.listarTodos();
@@ -45,13 +40,21 @@ public class AlunoController {
         alunoService.checkIn(aluno);
     }
 
-    public void consultarPlano(Aluno aluno) {
-        planoService.consultar(aluno);
+    public void atualizarTreino(Integer matricula, Treino treino) {
+        alunoService.atualizarTreino(matricula, treino);
     }
 
-    public void pagarMensalidade(Aluno aluno, Plano plano) {
-        planoService.pagarMensalidade(aluno, plano);
+    public List<String> listarTreino(Integer matricula) {
+        return alunoService.listarTreino(matricula);
     }
+
+//    public void consultarPlano(Aluno aluno) {
+//        planoService.consultar(aluno);
+//    }
+
+//    public void pagarMensalidade(Aluno aluno, Plano plano) {
+//        planoService.pagarMensalidade(aluno, plano);
+//    }
 
 
 

@@ -1,5 +1,6 @@
 package com.geovani237.gerenciador_academia.domain;
 
+import com.geovani237.gerenciador_academia.domain.enums.ObjetivoTreinoEnum;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -17,7 +18,7 @@ import java.util.Set;
 public class Treino {
 
     private Integer id;
-    private String objetivo;
+    private ObjetivoTreinoEnum objetivo;
     private Map<String, Exercicio> exercicios;
 
 //    public Treino(Long id, String objetivo, String exercicio, Integer series, Integer repeticoes) {
