@@ -3,14 +3,9 @@ package com.geovani237.gerenciador_academia.domain;
 import com.geovani237.gerenciador_academia.domain.enums.ObjetivoTreinoEnum;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -21,62 +16,4 @@ public class Treino {
     private ObjetivoTreinoEnum objetivo;
     private Map<String, Exercicio> exercicios;
 
-//    public Treino(Long id, String objetivo, String exercicio, Integer series, Integer repeticoes) {
-//        this.id = id;
-//        this.objetivo = objetivo;
-//        this.exercicio = exercicio;
-//        this.series = series;
-//        this.repeticoes = repeticoes;
-//    }
-//
-//    public Long getId() {
-//        return id;
-//    }
-//
-//    public void setId(Long id) {
-//        this.id = id;
-//    }
-//
-//    public String getObjetivo() {
-//        return objetivo;
-//    }
-//
-//    public void setObjetivo(String objetivo) {
-//        this.objetivo = objetivo;
-//    }
-//
-//    public String getExercicio() {
-//        return exercicio;
-//    }
-//
-//    public void setExercicio(String exercicio) {
-//        this.exercicio = exercicio;
-//    }
-//
-//    public Integer getSeries() {
-//        return series;
-//    }
-//
-//    public void setSeries(Integer series) {
-//        this.series = series;
-//    }
-//
-//    public Integer getRepeticoes() {
-//        return repeticoes;
-//    }
-//
-//    public void setRepeticoes(Integer repeticoes) {
-//        this.repeticoes = repeticoes;
-//    }
-
-//    @Override
-//    public String toString() {
-//        return " Treino {\n" +
-//                "    id=" + id +
-//                ",\n    objetivo='" + objetivo + '\'' +
-//                ",\n    exercicio='" + exercicio + '\'' +
-//                ",\n    series=" + series +
-//                ",\n    repeticoes=" + repeticoes + "\n"+
-//                '}';
-//    }
 }

@@ -6,7 +6,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-//@Repository
 public class PagamentoRepository {
 
     private static final Map<Integer, Pagamento> dbPagamentos = new HashMap<>();
@@ -22,9 +21,17 @@ public class PagamentoRepository {
         dbPagamentos.put(pagamento.getIdPagamento(), pagamento);
     }
 
-    public List<Pagamento> listarMensalisades(Integer matricula) {
+    public List<Pagamento> listarMensalidades(Integer matricula) {
         return dbPagamentos.values().stream()
                 .filter(p -> p.getIdMatricula().equals(matricula))
                 .toList();
     }
+
+    public Pagamento buscarPor(Integer matricula, int idPagamento) {
+        return dbPagamentos.values().stream()
+                .filter(p -> p.getIdMatricula().equals(matricula) && p.getIdPagamento() == idPagamento)
+                .findFirst()
+                .orElse(null);
+    }
+
 }
