@@ -38,35 +38,33 @@ public class Main {
         aluno.setNome("Geovani1");
         aluno.setTelefone("19999999999");
         aluno.setObjetivo("Ganhar Músculo");
-        aluno.setTreino(treino);
+//        aluno.setTreino(treino);
 
         Aluno aluno2 = new Aluno();
         aluno2.setNome("Geovani2");
         aluno2.setTelefone("19999999999");
         aluno2.setObjetivo("Ganhar Músculo");
+        aluno2.setTreino(treino);
         aluno2.setPlano(plano);
 
 
 
         controller.cadastrar(aluno2);
+        controller.cadastrar(treino);
 
-        controller.checkIn(aluno2);
+//
+//        controller.listarTodos().forEach(System.out::println);
+//        controller.consultarPlano(aluno2);
+//        aluno2.getPlano().setVencimento(1);
 //        controller.checkIn(aluno2);
+//        controller.consultarPlano(aluno2);
+//        aluno2.getPlano().setVencimento(2);
+//        controller.checkIn(aluno2);
+//        controller.checkIn(aluno2);
+//        controller.checkIn(aluno2);
+//        controller.consultarPlano(aluno2);
 //        controller.checkIn(aluno2);
 //        controller.listarTodos().forEach(System.out::println);
-//
-        controller.listarTodos().forEach(System.out::println);
-        controller.consultarPlano(aluno2);
-        aluno2.getPlano().setVencimento(1);
-        controller.checkIn(aluno2);
-        controller.consultarPlano(aluno2);
-        aluno2.getPlano().setVencimento(2);
-        controller.checkIn(aluno2);
-        controller.checkIn(aluno2);
-        controller.checkIn(aluno2);
-        controller.consultarPlano(aluno2);
-        controller.checkIn(aluno2);
-        controller.listarTodos().forEach(System.out::println);
 //        controller.pagarMensalidade(aluno2, plano);
 //        System.out.println("-------------------");
 //        controller.consultarPlano(aluno2);

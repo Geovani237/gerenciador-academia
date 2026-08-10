@@ -42,7 +42,7 @@ public class AlunoService {
         if (aluno.getPlano().getStatus()) {
             List<LocalDateTime> datas = aluno.getHistorico();
             datas.add(LocalDateTime.now());
-            aluno.setHistorico(datas);
+//            aluno.setHistorico(datas);
             System.out.println("Acesso a academia LIBERADO!");
             System.out.println(aluno.getPlano().getStatus());
         } else {
