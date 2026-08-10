@@ -7,7 +7,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-//@Repository
 public class AlunoRepository {
 
     private static final Map<Integer, Aluno> dbAlunos = new HashMap<>();
@@ -18,10 +17,16 @@ public class AlunoRepository {
         dbAlunos.put(aluno.getMatricula(), aluno);
         return aluno;
     }
-//    List<?> visualizarTodos(Aluno aluno);
 
+    public void atualizar(Aluno aluno) {
+        dbAlunos.put(aluno.getMatricula(), aluno);
+    }
 
     public List<Aluno> listarTodos() {
         return new ArrayList<>(dbAlunos.values());
+    }
+
+    public Aluno buscarPorMatricula(Integer matricula) {
+        return dbAlunos.get(matricula);
     }
 }
